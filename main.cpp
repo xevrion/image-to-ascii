@@ -20,20 +20,12 @@ int main() {
     return -1;
   }
 
-  // Success: Print image properties
-  std::cout << "Successfully loaded image!" << std::endl;
+
   std::cout << "Width:    " << width << " px" << std::endl;
   std::cout << "Height:   " << height << " px" << std::endl;
-  std::cout << "Channels: " << channels << " (3=RGB, 4=RGBA)" << std::endl;
+  std::cout << "Channels: " << channels << std::endl;
 
-  // // Optional: Access the first pixel's RGB data
-  // if (channels >= 3) {
-  //     int r = imgData[0];
-  //     int g = imgData[1];
-  //     int b = imgData[2];
-  //     std::cout << "First pixel RGB: (" << r << ", " << g << ", " << b << ")"
-  //     << std::endl;
-  // }
+
   // 0.299×R + 0.587×G + 0.114×B
   for (int i = 0; i < height; i+=8) {
     for (int j = 0; j < width; j+=8) {
